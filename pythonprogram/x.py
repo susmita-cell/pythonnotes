@@ -1,0 +1,1 @@
+print("clg=raajdhani enginring college")
