@@ -1,0 +1,619 @@
+#display hi msg 5 times
+print("hi")
+print("hi")
+print("hi")
+print("hi")
+print("hi")
+
+or
+#display hi msg 5 times
+print("hi\nhi\nhi\hi\nhi")
+
+
+
+looping
+______________
+some stmt repeated cont   then choose loop.
+Then write that repeated stmt write only once using loop.
+in python 2 types of loop
+(1)while
+(2)for in 
+
+every loop there are 3 section
+(1)initlization/start
+(2)condtion /stop
+(3)inc/dec or updateable or step
+
+
+syntax:
+
+initlization
+
+while condtion:
+	repeated stmt write once
+	inc/dec
+
+#display hi msg 5 times using while loop
+i=1
+while i<6:     #  i<6 repalce  i<=5   i!=6
+	print("hi")
+	i=i+1
+
+o/p:
+i=1,2,3,4,5,6
+hi
+hi
+hi
+hi
+hi
+
+
+#display i msg 5 times using while loop
+i=1
+while i<6:     #  i<6 repalce  i<=5   i!=6
+	print("i")
+	i=i+1
+	
+o/p:
+i=1,2,3,4,5,6
+i
+i
+i
+i
+i
+
+
+#display 1 to  5 times using while loop
+i=1
+while i<6:     #  i<6 repalce  i<=5   i!=6
+	print(i)
+	i=i+1
+	
+o/p:
+i=1,2,3,4,5,6
+1
+2
+3
+4
+5
+
+
+#display 1 to  10 times using while loop
+i=1
+while i<11:     
+	print(i)
+	i=i+1
+	
+o/p:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+#display 10 to  20 times using while loop
+i=10
+while i<21:     
+	print(i)
+	i=i+1
+
+#display 10 to  1 times using while loop
+i=10
+while i>0:     
+	print(i)
+	i=i-1
+
+
+
+i=1
+print("A")
+while  i<4:
+	print("B")
+	i=i+1
+	print("C")
+print(i)
+print("D")
+
+
+o/p:
+i=1,2,3,4
+A
+B
+C
+B
+C
+B
+C
+4
+D
+
+
+
+i=1
+print("A")
+if  i<4:
+	print("B")
+	i=i+1
+	print("C")
+print(i)
+print("D")
+
+
+o/p:
+i=1,2
+A
+B
+C
+2
+D
+
+
+
+break : it is used to stop the loop
+
+i=1
+print("A")
+while  i<4:
+	print("B")
+	i=i+1
+	print("C")
+	break
+print(i)
+print("D")
+
+
+o/p:
+i=1,2
+A
+B
+C
+2
+D
+
+
+
+
+
+i=1
+print("A")
+while  i<5:
+	print("B")
+	i+=1
+	if i==3:
+		break
+	print("C")
+print(i)
+print("D")
+
+o/p:
+i=1,2,3
+A
+B
+C
+B
+3
+D
+
+continue: is is used to back condtion  or beging of loop
+
+
+i=1
+print("A")
+while  i<4:
+	print("B")
+	i=i+1
+	print("C")
+	continue
+print(i)
+print("D")
+
+
+o/p:
+i=1,2,3,4
+A
+B
+C
+B
+C
+B
+C
+4
+D
+
+
+
+
+
+
+i=1
+print("A")
+while  i<4:
+	print("B")
+	i=i+1
+	continue
+	print("C")
+print(i)
+print("D")
+
+
+o/p:
+
+i=1,2,3,4
+A
+B
+B
+B
+4
+D
+
+
+
+
+
+i=1
+print("A")
+while  i<5:
+	print("B")
+	i=i+1
+    if i>=3:
+		continue
+	print("C")
+print(i)
+print("D")
+o/p:
+i=1,2,3,4,5
+A
+B
+C
+B
+B
+B
+5
+D
+
+pass: 
+i=1
+while False:
+	pass
+print(i)
+
+o/p:
+1
+
+
+
+while False:
+	pass
+print("hi")
+
+
+o/p:
+hi
+
+
+
+
+
+
+while True:
+	pass
+print("hi")
+
+
+
+
+o/p:
+infinite nothing 
+
+
+while True:
+	print("hi")
+print("bye")
+
+
+o/p:
+hi hi ......    cont+c
+
+
+while False:
+	print("hi")
+print("bye")
+
+o/p:
+bye
+
+
+if True:
+	print("hi")
+print("bye")
+
+
+o/p:
+hi
+bye
+
+
+i=1
+while i<6:
+	print(i)
+print("ok")
+
+
+o/p:
+1
+1
+1
+
+contrl+c
+
+
+
+while else
+
+i=1
+print("A")
+while i<3:
+	print("B")
+	i=i+1
+else:
+	print("C")
+print(i)
+
+
+o/p:
+i=1,2,3
+A
+B
+B
+C
+3
+
+
+
+i=1
+print("A")
+while i<3:
+	print("B")
+	i=i+1
+	break
+else:
+	print("loop end")
+print(i)
+
+
+o/p:
+A
+B
+2
+
+
+range(start,stop,step)
+range(start,stop)     step  by default 1
+range(stop)       start=0   step incrase 1      stop-1
+
+
+range(10,20,1)     # 10 to 19
+
+sequence:
+string
+list
+tuple
+set
+range 
+.....
+
+
+for in loop    syntax
+_______________
+
+
+for element in sequnence:
+	repeated stmt
+
+
+
+for i in  "welcome":
+	print(i)
+
+
+o/p:
+w
+e
+l
+c
+o
+m
+e
+
+for i in  "welcome":
+	print("hi")
+
+
+o/p:
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+
+
+#display 1 to 10
+
+for i in range(1,11,1):
+	print(i)
+
+o/p:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+for i in range(1,11):
+	print(i)
+
+o/p:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+for i in range(11):     #range(0,11,1)
+	print(i)
+
+o/p:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+wap display 10 tp 20 all even number
+for i in range(10,21,2):  
+	print(i)
+
+
+
+#wap 10 to 1
+
+for i in range(10,0,-1):  
+	print(i)
+
+
+
+for i in range(-3,-7,-1):  
+	print(i)
+
+o/p:
+-3
+-4
+-5
+-6
+
+for i in range(-3,-7,1):  
+	print(i)
+
+
+o/p:
+nothing
+
+pass:
+
+for i in range(5):
+	print(i)
+
+o/p:
+0
+1
+2
+3
+4
+
+for i in range(5):
+	pass
+print(i)
+
+o/p:
+4
+
+
+for else:
+
+
+for i in range(3):
+	print("hi")
+else:
+	print("bye")
+print(i)
+
+o/p:
+hi
+hi
+hi
+bye
+2
+
+
+for i in range(3):
+	print("hi")
+	break
+else:
+	print("bye")
+print(i)
+
+o/p:
+hi
+0
+
+
+for i in range(5):
+	print(i)
+	if i==3:
+		break
+	print("hi")
+print("ok")
+print(i)
+
+
+o/p:
+0
+hi
+1
+hi
+2
+hi
+3
+ok
+3
+
+
+
+
+for i in range(5):
+	print(i)
+	if i==3:
+		continue
+	print("hi")
+print("ok")
+print(i)
+
+
+o/p:
+0
+hi
+1
+hi
+2
+hi
+3
+4
+hi
+ok
+4
