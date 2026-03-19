@@ -1,0 +1,921 @@
+Inheritance allows a class (called child or subclass) to acquire properties and behaviors (methods) 
+from another class (called parent or superclass).
+This promotes:
+This promotes:
+Code reusability
+Method overriding (polymorphism)
+Cleaner and more manageable code structure
+"Is-a" relationship modeling
+
+
+
+syntax:
+class parentclass:
+	logic
+class childclass(parentclass):
+	logic
+
+
+types of inhertiance 
+_________________________
+Type	                Description	                           			  Example
+Single Inheritance	One child class inherits from one parent class.      	A → B
+
+Multiple Inheritance  One child class inherits from multiple parent classes.  A, B → C
+Multilevel Inheritance  One class inherits from another child class.          A → B → C
+Hierarchical Inheritance  Multiple child classes inherit from one parent class.  A → B, C
+Hybrid Inheritance       Combination of multiple types of inheritance.            	Complex hierarchy
+
+
+
+
+
+single inhertiance example :
+____________________________
+class Parent:
+    def show(self):
+        print("Parent class")
+
+class Child(Parent):
+    def display(self):
+        print("Child class")
+
+obj = Child()
+obj.show()
+obj.display()
+
+
+
+multiple inhertiance
+____________________
+class A:
+    def method1(self):
+        print("Class A")
+
+class B:
+    def method2(self):
+        print("Class B")
+
+class C(A, B):  # inherits both A and B
+    def method3(self):
+        print("Class C")
+
+obj = C()
+obj.method1()
+obj.method2()
+obj.method3()
+
+3. Multilevel Inheritance
+____________________________________
+class GrandParent:
+    def gp(self):
+        print("GrandParent")
+
+class Parent(GrandParent):
+    def p(self):
+        print("Parent")
+
+class Child(Parent):
+    def c(self):
+        print("Child")
+
+obj = Child()
+obj.gp()
+obj.p()
+obj.c()
+
+ 4. Hierarchical Inheritance
+ class Parent:
+    def show(self):
+        print("Parent")
+
+class Child1(Parent):
+    def c1(self):
+        print("Child1")
+
+class Child2(Parent):
+    def c2(self):
+        print("Child2")
+
+obj1 = Child1()
+obj2 = Child2()
+obj1.show()
+obj1.c1()
+obj2.show()
+obj2.c2()
+
+5. Hybrid Inheritance
+
+
+class A:
+    def method1(self):
+        print("A")
+
+class B(A):
+    def method2(self):
+        print("B")
+
+class C:
+    def method3(self):
+        print("C")
+
+class D(B, C):  # hybrid
+    def method4(self):
+        print("D")
+
+obj = D()
+obj.method1()
+obj.method2()
+obj.method3()
+obj.method4()
+
+
+
+
+
+
+
+class A:
+	def setA(self):
+		self.x=10
+	def dispA(self):
+		print(self.x)
+class B(A):
+	pass
+ob=B()
+ob.setA()
+ob.dispA()
+
+
+o/P; 
+10
+
+
+
+class A:
+	def setA(self):
+		self.x=10
+	def dispA(self):
+		print(self.x)
+class B(A):
+	def setB(self):
+		self.y=20
+	def dispB(self):
+		print(self.y)
+ob=B()
+ob.setA()
+ob.dispA()
+ob.setB()
+ob.dispB()
+
+o/P;
+10
+20
+
+
+
+
+class A:
+	def setA(self):
+		self.x=10
+	def dispA(self):
+		print(self.x)
+class B(A):
+	def setB(self):
+		self.y=20
+	def dispB(self):
+		print(self.y)
+ob=B()
+
+ob.dispA()
+
+ob.dispB()
+
+o/P:
+error  
+
+here setA() setB()  defined not calling   
+using above that method  to initlization
+
+better you chosse constructor
+
+
+
+
+class A:
+	def __init__(self):
+		self.x=10
+	def dispA(self):
+		print(self.x)
+class B(A):
+	def __init__(self):
+		self.y=20
+	def dispB(self):
+		print(self.y)
+ob=B()
+
+ob.dispA()
+
+ob.dispB()
+
+
+o/P:
+error 
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\OneDrive\Desktop\pythonbiki\inex1.py", line 13, in <module>
+    ob.dispA()
+  File "C:\Users\LENOVO\OneDrive\Desktop\pythonbiki\inex1.py", line 5, in dispA
+    print(self.x)
+          ^^^^^^
+AttributeError: 'B' object has no attribute 'x'
+
+
+Constructor in Inheritance 
+____________________________________
+In Python, constructors are defined using the __init__() method. When inheritance is involved,
+ constructors in the base and derived classes interact in specific ways.
+
+Basic Rules of Constructor in Inheritance:
+If the derived(child) class does not define a constructor, the base(parent) class constructor is automatically called.
+
+If the derived class defines its own constructor, the base class constructor is not called automatically. 
+You must call it explicitly using super().
+
+
+ Example 1: Derived class without its own constructor
+
+class A:
+	def __init__(self):
+		print("A construtor")
+class B(A):
+	pass
+ob=B()
+
+o/P;
+A constructor 
+
+
+
+Example 2: Derived class with its own constructor (no super())
+
+class A:
+	def __init__(self):
+		print("A construtor")
+class B(A):
+	def __init__(self):
+		print("B constructor")
+ob=B()
+
+o/p:
+B constructor 
+
+
+Example 3: Derived class with super() to call parent constructor
+class A:
+	def __init__(self):
+		print("A construtor")
+class B(A):
+	def __init__(self):
+		super().__init__()
+		print("B constructor")
+ob=B()
+
+o/P;
+A constructor 
+B constructor
+
+
+ Example 4: Passing Arguments to Base Constructor
+
+ class Parent:
+    def __init__(self, name):
+        print("Parent Constructor: ", name)
+
+class Child(Parent):
+    def __init__(self, name, age):
+        super().__init__(name)  # passing argument to base
+        print("Child Constructor: ", age)
+
+obj = Child("John", 25)
+
+
+
+Parent Constructor:  John
+Child Constructor:  25
+
+Case	                         Behavior
+No constructor 				in child	Parent constructor is called automatically
+constructors				 in child, no super()	Parent constructor is not called
+Constructor 				in child with super()	Both constructors are called
+Constructor with arguments				Use super().__init__(args) to pass
+
+
+class A:
+	def __init__(self):
+		print("A construtor")
+class B(A):
+	def __init__(self,x):
+		super().__init__()  
+		print("B constructor ",x)
+
+ob=B(10)
+
+
+o/P:
+A constrcutor 
+B constructor 10
+
+
+
+
+
+
+
+
+
+
+
+class A:
+	def __init__(self):
+		self.x=10
+	def dispA(self):
+		print(self.x)
+class B(A):
+	def __init__(self):
+		super().__init__()
+		self.y=20
+	def dispB(self):
+		print(self.y)
+ob=B()
+ob.dispA()
+ob.dispB()
+
+
+o/P; 
+10
+20
+
+
+
+
+
+class A:
+	def __init__(self,x):
+		self.x=x
+	def dispA(self):
+		print(self.x)
+class B(A):
+	def __init__(self,x,y):
+		super().__init__(x)
+		self.y=y
+	def dispB(self):
+		print(self.y)
+ob=B(10,20)
+ob.dispA()
+ob.dispB()
+obj=B(30,40)
+obj.dispA()
+obj.dispB()
+
+o/p:
+
+10
+20
+30
+40
+
+constructor with default parameter
+___________________________________
+
+class A:
+	def __init__(self,x):
+		print("A construtor ",x)
+class B(A):
+	def __init__(self,x,y=0):
+		super().__init__(x)
+		print("B constructor ",y)
+
+ob=B(10)
+obj=B(30,40)
+
+
+
+o/P:
+10
+0
+30
+40
+
+
+
+
+
+
+class A:
+	def show(self):
+		print("A show")
+class B(A):
+	pass
+
+ob=B()
+ob.show()
+
+
+o/P:
+A show
+
+class A:
+	def show(self):
+		print("A show")
+class B(A):
+	def show(self):
+		print("B show")
+
+ob=B()
+ob.show()
+
+o/P;
+B show 
+
+ super() in Python:
+ super().method_name(argument)
+super() is a built-in function used to call methods or constructors from a parent (base) class. 
+It is most commonly used in inheritance, especially with method overriding.
+
+Why Use super()?
+To call parent class method from child class
+
+To avoid duplicating code
+
+To support multiple inheritance cleanly
+
+To extend functionality rather than replace
+
+
+
+
+class A:
+	def show(self):
+		print("A show")
+class B(A):
+	def show(self):
+		super().show()
+		print("B show")
+
+ob=B()
+ob.show()
+
+
+o/P:
+A show
+B show 
+
+
+
+
+static and non-static blocks do not exist in the same form as in Java. 
+However, you can emulate their behavior using:
+
+Class-level statements for static blocks (executed when the class is defined).
+
+__init__ constructor and instance methods or custom instance-level code blocks (executed when an object is created).
+
+
+
+
+
+Static Block Equivalent in Python (Executed when the class is loaded)
+Python does not have a dedicated static block, but code at the class level is executed
+ when the class is first interpreted (i.e., when the script is run or module imported).
+class A:
+	print("A static block")
+print(A)
+print(A)
+
+
+o/p:
+A static block
+<class '__main__.A'>
+<class '__main__.A'>
+
+
+
+class A:
+	print("A static block")
+class B(A):
+	pass
+print(B)
+
+
+o/P:
+A static block
+<class '__main__.B'>
+
+
+
+
+
+class A:
+	print("A static block")
+class B(A):
+	print("B static block")
+print(B)
+
+
+o/P:
+A static block
+B static block
+
+
+
+class A:
+	print("A static block")
+	def __init__(self):
+		print("A constructor")
+class B(A):
+	pass
+ob=B()
+
+o/P;
+A static block
+A constructor
+
+
+
+
+
+class A:
+	print("A static block")
+	def __init__(self):
+		print("A constructor")
+class B(A):
+	def __init__(self):
+		print("B constructor")
+ob=B()
+
+o/P:
+A static block 
+B constructor 
+
+
+class A:
+	print("A static block")
+	def __init__(self):
+		print("A constructor")
+class B(A):
+	print("B static block")
+	def __init__(self):
+		print("B constructor")
+ob=B()
+
+
+o/P;
+A static block
+B static block
+B constructor
+
+
+
+class A:
+	print("A static block")
+	def __init__(self):
+		print("A constructor")
+class B(A):
+	print("B static block")
+	def __init__(self):
+		print("B constructor")
+ob=B()
+obj=B()
+
+
+o/P:
+A static block
+B static block
+B constructor
+B constructor
+
+
+
+
+class A:
+	print("A static block")
+	def __init__(self):
+		print("A constructor")
+class B(A):
+	print("B static block")
+	def __init__(self):
+		super().__init__()
+		print("B constructor")
+ob=B()
+obj=B()
+
+
+o/P;
+A static block
+B static block
+A constructor
+B constructor
+A constructor
+B constructor
+
+
+
+
+Non-Static Block Equivalent in Python (Executed during object creation)
+You can use instance-level logic 
+in the constructor (__init__) or inside a method, or even use a technique like this:
+
+
+
+class A:
+	print("A static block")
+	def __init__(self):
+		self.non()
+		print("A constructor")
+	def non(self):
+		print("A non static block")
+class B(A):
+	print("B static block")
+	def __init__(self):
+		super().__init__()
+		self.non1()
+		print("B constructor")
+	def non1(self):
+		print("B non static block")
+ob=B()
+obj=B()
+
+
+o/P;
+A static block
+B static block
+A non static block
+A constructor
+B non static block
+B constructor
+A non static block
+A constructor
+B non static block
+B constructor
+
+
+
+
+
+
+
+
+class A {
+    static {
+        System.out.println("A static block");
+    }
+
+    {
+        System.out.println("A non static block");
+    }
+
+    A() {
+        System.out.println("A constructor");
+    }
+}
+
+class B extends A {
+    static {
+        System.out.println("B static block");
+    }
+
+    {
+        System.out.println("B non static block");
+    }
+
+    B() {
+        super(); // Optional, auto-called
+        System.out.println("B constructor");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        B ob = new B();
+        B obj = new B();
+    }
+}
+
+
+Concept	             Java	                  Python Equivalent
+Static Block	static { }	                Class-level code (executed once)
+Non-static Block	{ }                             before constructor	Call method inside __init__()
+Constructor	ClassName()	                         __init__(self)
+
+
+
+
+constructor and destructor in inheritance 
+_______________________________________________________
+
+In Python, constructors (__init__) and destructors (__del__) behave differently 
+in inheritance compared to some other languages like Java or C++.
+
+Constructor in Inheritance (__init__())
+Key Points:
+When a subclass is instantiated, Python first calls the constructor of the subclass.
+
+To explicitly call the parent constructor, use super().__init__() or ParentClass.__init__(self).
+
+If super().__init__() is not used, only the constructor of subclass is executed.
+
+
+
+
+ Destructor in Inheritance (__del__())
+Key Points:
+Destructor is called when an object is about to be destroyed.
+
+Python automatically calls destructors in the reverse order of construction — child first, then parent.
+
+You can explicitly call the parent class’s __del__() from the subclass destructor.
+
+
+constructor and destructor in inheritance
+_____________________________________________
+class A:
+	print("A static block")
+	def __init__(self):
+		print("A constructor")
+	def __del__(self):
+		print("A destructor ")
+	
+class B(A):
+	print("B static block")
+	def __init__(self):
+		
+		print("B constructor")
+	def __del__(self):
+		print("B destructor ")
+	
+ob=B()
+
+
+
+o/P;
+A static block
+B static block
+B constructor
+B destructor
+
+
+
+class A:
+	print("A static block")
+	def __init__(self):
+		print("A constructor")
+	def __del__(self):
+		print("A destructor ")
+	
+class B(A):
+	print("B static block")
+	def __init__(self):
+		super().__init__()
+		print("B constructor")
+	def __del__(self):
+
+		print("B destructor ")
+	
+ob=B()
+del ob
+
+o/P;
+
+A static block
+B static block
+A constructor
+B constructor
+B destructor
+
+
+
+class A:
+	print("A static block")
+	def __init__(self):
+		print("A constructor")
+	def __del__(self):
+		print("A destructor ")
+	
+class B(A):
+	print("B static block")
+	def __init__(self):
+		super().__init__()
+		print("B constructor")
+	def __del__(self):
+		super().__del__()
+		print("B destructor ")
+	
+ob=B()
+del ob
+
+o/P;
+A static block
+B static block
+A constructor
+B constructor
+A destructor
+B destructor
+
+class Parent:
+    def __init__(self):
+        print("Parent Constructor")
+
+    def __del__(self):
+        print("Parent Destructor")
+
+class Child(Parent):
+    def __init__(self):
+        super().__init__()
+        print("Child Constructor")
+
+    def __del__(self):
+        print("Child Destructor")
+        super().__del__()
+
+# Create and delete object
+c = Child()
+del c
+
+
+
+o/P;
+Parent Constructor
+Child Constructor
+Child Destructor
+Parent Destructor
+
+
+
+
+real life single inhertiance example 
+_________________________________________
+
+# Parent class
+class Person:
+    def __init__(self, name, age):
+        self._name = name       # Protected variable (by convention)
+        self._age = age
+        print("Person constructor called")
+
+    # Setter methods
+    def set_name(self, name):
+        self._name = name
+
+    def set_age(self, age):
+        self._age = age
+
+    # Getter methods
+    def get_name(self):
+        return self._name
+
+    def get_age(self):
+        return self._age
+
+    # Extra method
+    def show_info(self):
+        print(f"Name: {self._name}, Age: {self._age}")
+
+# Child class
+class Student(Person):
+    def __init__(self, name, age, roll, course):
+        super().__init__(name, age)  # Call constructor of Person
+        self._roll = roll
+        self._course = course
+        print("Student constructor called")
+
+    # Setter methods
+    def set_roll(self, roll):
+        self._roll = roll
+
+    def set_course(self, course):
+        self._course = course
+
+    # Getter methods
+    def get_roll(self):
+        return self._roll
+
+    def get_course(self):
+        return self._course
+
+    # Extra method
+    def show_student_info(self):
+        self.show_info()  # Reuse parent method
+        print(f"Roll: {self._roll}, Course: {self._course}")
+
+# Create object of Student
+s1 = Student("Rahul", 20, 101, "B.Tech")
+s1.show_student_info()
+
+# Modify values using setters
+s1.set_name("Ravi")
+s1.set_age(21)
+s1.set_roll(102)
+s1.set_course("MCA")
+
+print("\nAfter update:")
+s1.show_student_info()

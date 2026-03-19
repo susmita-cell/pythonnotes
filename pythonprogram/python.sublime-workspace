@@ -1,0 +1,220 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 131.199996948,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/SUSMITA/OneDrive/Desktop/a/pythonnotes/pythonprogram/1.py",
+		"/C/Users/SUSMITA/OneDrive/Desktop/a/pythonnotes/pythonprogram/#display hi msg 5 times",
+		"/C/Users/SUSMITA/OneDrive/Desktop/a/pythonnotes/pythonprogram/operator overloading",
+		"/C/Users/SUSMITA/Desktop/a/pythonnotes/pythonprogram/parameter.py",
+		"/C/Users/SUSMITA/Desktop/a/pythonnotes/pythonprogram/sallary4.py",
+		"/C/Users/SUSMITA/Desktop/a/pythonnotes/pythonprogram/bank.py",
+		"/C/Users/SUSMITA/Desktop/a/pythonnotes/pythonprogram/sallary3.py",
+		"/C/Users/SUSMITA/Desktop/a/pythonnotes/pythonprogram/Student Management System (CRUD) using Dictionar.py",
+		"/C/Users/SUSMITA/Desktop/a/pythonnotes/pythonprogram/Inheritance",
+		"/C/Users/SUSMITA/Desktop/a/pythonnotes/pythonprogram/constructor",
+		"/C/Users/SUSMITA/Desktop/a/pythonnotes/pythonprogram/method  in oops",
+		"/C/Users/SUSMITA/Desktop/a/pythonnotes/pythonprogram/terNary operator",
+		"/C/Users/SUSMITA/Desktop/a/pythonnotes/pythonprogram/y.py",
+		"/C/Users/SUSMITA/Desktop/a/pythonnotes/pythonprogram/x.py",
+		"/C/Users/SUSMITA/Desktop/a/pythonnotes/pythonprogram/z.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/terNary operator",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/multiple if",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/def4.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/def2.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/def3.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/constant",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/#display hi msg 5 times",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/return notes",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/def.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/while4.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/continue.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/while.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/while2.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/while3.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/renge.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/renge2.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/terNary.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/if,else2.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/sallary2.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/ascii4.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/if,else.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/ascii3.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/ascii2.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/ascii.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/2 digitB.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/sallary.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/zero.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/nonezero.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/-ve.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/2 digit.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/+ve or -ve.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/even.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/+ve.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/a=5.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/+ve to-ve.py",
+		"/C/Users/SUSMITA/Desktop/pythonprogram/a=5"
+	],
+	"find":
+	{
+		"height": 43.2
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 43.2
+	},
+	"input":
+	{
+		"height": 50.4
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"pinned_build_system": "",
+	"project": "python.sublime-project",
+	"replace":
+	{
+		"height": 84.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

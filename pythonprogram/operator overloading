@@ -1,0 +1,286 @@
+operator overloading
+_______
+interpeter know how to add 2 number
+                      add 2 real number
+interpeter not working  operator in userdefined datatype.
+
+class Mycomplex:
+	def __init__(self,r,i):
+		self.r=r
+		self.i=i
+	def show(self):
+		print(self.r,"+",self.i,"i")
+c1=Mycomplex(2,3)
+c2=Mycomplex(3,4)
+c3=Mycomplex(0,0)
+#c3=c1+c2 error
+c3.r=c1.r+c2.r
+c3.i=c1.i+c2.i
+c1.show()
+c2.show()
+c3.show()
+C:\Users\HP\Desktop>py test.py
+2 + 3 i
+3 + 4 i
+5 + 7 i
+
+
+class MyTime:
+    def __init__(self,h,m,s):
+        self.h=h
+        self.m=m
+        self.s=s
+    def show(self):
+        print(self.h,":",self.m,":",self.s)
+t1=MyTime(5,40,15)
+t2=MyTime(4,45,55)
+t3=MyTime(0,0,0)
+
+t3.s=t1.s+t2.s
+t3.m=t1.m+t2.m+t3.s//60
+t3.s=t3.s%60
+t3.h=t1.h+t2.h+t3.m//60
+t3.m=t3.m%60
+t1.show()
+t2.show()
+t3.show()
+
+
+
+class Mycomplex:
+	def __init__(self,r,i):
+		self.__r=r
+		self.__i=i
+	def show(self):
+		print(self._r,"+",self._i,"i")
+c1=Mycomplex(2,3)
+c2=Mycomplex(3,4)
+c3=Mycomplex(0,0)
+#c3=c1+c2  error
+#c3._r=c1.r+c2._r error
+#c3._i=c1.i+c2._i  error
+c1.show()
+c2.show()
+c3.show()
+
+o/p:
+error
+
+
+
+
+class Mycomplex:
+	def __init__(self,r,i):
+		self.__r=r
+		self.__i=i
+	def show(self):
+		print(self._r,"+",self._i,"i")
+	def __add__(self,c2):
+		c3=Mycomplex(0,0)
+		c3._r=self.r+c2._r
+		c3._i=self.i+c2._i
+		return c3
+c1=Mycomplex(2,3)
+c2=Mycomplex(3,4)
+c3=c1+c2  #c1.add(c2)
+c1.show()
+c2.show()
+c3.show()
+
+
+
+
+class Mycomplex:
+    def __init__(self,r,i):
+        self.__r=r
+        self.__i=i
+    def show(self):
+        print(self._r,"+",self._i,"i")
+    def __sub__(self,c2):
+        c3=Mycomplex(0,0)
+        c3._r=self.r-c2._r
+        c3._i=self.i-c2._i
+        return c3
+c1=Mycomplex(2,3)
+c2=Mycomplex(3,4)
+c3=c1-c2  #c1.sub(c2)
+c1.show()
+c2.show()
+c3.show()
+
+
+
+Operator	Magic Method
++	add(self, other)
+–	sub(self, other)
+*	mul(self, other)
+/	truediv(self, other)
+//	floordiv(self, other)
+%	mod(self, other)
+**	pow(self, other)
+>>	rshift(self, other)
+<<	lshift(self, other)
+&	and(self, other)
+|	or(self, other)
+^	xor(self, other)     a=5  b=6 
+                        101
+                        110
+                         0 1 1
+
+Comparison Operators:
+Operator	Magic Method
+<	lt(self, other)
+> 	gt(self, other)
+<=	le(self, other)
+>=	ge(self, other)
+==	eq(self, other)
+!=	ne(self, other)
+Assignment Operators:
+
+Operator	Magic Method
+-=	isub(self, other)
++=	iadd(self, other)
+*=	imul(self, other)
+/=	idiv(self, other)
+//=	ifloordiv(self, other)
+%=	imod(self, other)
+**=	ipow(self, other)
+>>=	irshift(self, other)
+<<=	ilshift(self, other)
+&=	iand(self, other)
+|=	ior(self, other)
+^=	ixor(self, other)
+Unary Operators:
+
+Operator	Magic Method
+–	neg(self)
++	pos(self)
+~	invert(self)
+
+
+
+lessthan operator overloading
+___________
+class Mycomplex:
+	def __init__(self,r,i):
+		self.__r=r
+		self.__i=i
+	def show(self):
+		print(self.__r,"+",self._i,"i")
+	def lt(self,c2):
+		if self.__r<c2.r and self.i<c2._i:
+			return True 
+		else:
+			return False
+c1=Mycomplex(2,3)
+c2=Mycomplex(3,4)
+print(c1<c2)
+
+
+class Test:
+    def __init__(self):
+        self.x=10
+        self.y=12.34
+    def _str_(self):
+        return '{self.x} {self.y}'.format(self=self)
+t=Test()
+print(t)
+g
+
+
+
+
+class Complex:
+ 
+    # Constructor
+    def _init_(self, real, imag):
+        self.real = real
+        self.imag = imag
+"""
+    # For call to repr(). Prints object's information
+    def _repr_(self):
+        return 'Rational(%s, %s)' % (self.real, self.imag)   
+""" 
+"""
+    # For call to str(). Prints readable form
+    def _str_(self):
+        return 'hi %s + i%s' % (self.real, self.imag)  
+"""  
+# Driver program to test above
+t = Complex(10, 20)
+ 
+# Same as "print t"
+print(t)
+print (str(t))
+print (repr(t))
+[20:13, 7/3/2024] Jitusir 9090519502 Ltlt: class Time:
+    def _init_(self, hours, minutes):
+        self.hours = hours
+        self.minutes = minutes
+    def _add_(self, other_time):
+        # Check if the other_time is a Time object
+        if not isinstance(other_time, Time):
+            raise TypeError("Can only add Time objects together")
+
+        # Add the hours and minutes, and handle carryover
+        total_hours = self.hours + other_time.hours
+        total_minutes = self.minutes + other_time.minutes
+
+        if total_minutes >= 60:
+            total_hours += 1
+            total_minutes -= 60
+
+        return Time(total_hours, total_minutes)
+
+    def _str_(self):
+        return f"{self.hours:02d}:{self.minutes:02d}"
+
+# Example usage:
+time1 = Time(2, 30)
+time2 = Time(1, 45)
+
+result = time1 + time2
+print("Time 1:", time1)
+print("Time 2:", time2)
+print("Time 1 + Time 2:", result)
+
+
+
+
+class Time:
+    def _init_(self, hours, minutes, seconds):
+        self.hours = hours
+        self.minutes = minutes
+        self.seconds = seconds
+
+    def _add_(self, other_time):
+        # Check if the other_time is a Time object
+        if not isinstance(other_time, Time):
+            raise TypeError("Can only add Time objects together")
+
+        # Add the hours, minutes, and seconds, and handle carryover
+        total_seconds = self.seconds + other_time.seconds
+        total_minutes = self.minutes + other_time.minutes
+        total_hours = self.hours + other_time.hours
+
+        if total_seconds >= 60:
+            total_minutes += total_seconds // 60
+            total_seconds %= 60
+
+        if total_minutes >= 60:
+            total_hours += total_minutes // 60
+            total_minutes %= 60
+
+        return Time(total_hours, total_minutes, total_seconds)
+
+    def _str_(self):
+        return f"{self.hours:02d}:{self.minutes:02d}:{self.seconds:02d}"
+
+# Example usage:
+time1 = Time(2, 30, 45)
+time2 = Time(1, 45, 30)
+
+result = time1 + time2
+print("Time 1:", time1)
+print("Time 2:", time2)
+print("Time 1 + Time 2:", result)

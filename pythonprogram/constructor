@@ -1,0 +1,174 @@
+constructor
+
+
+class Rectangle:
+	def __init__(self):   #constrcutor
+		self.length=5
+		self.breadth=7
+	def show(self):
+		print("rectangle lenegth=",self.length)
+		print("rectangle breadth=",self.breadth)
+	def area(self):
+		print("area of rectangle=",self.length*self.breadth)
+	def perimeter(self):
+		return 2*(self.length+self.breadth)
+r=Rectangle()
+r.show()
+r.area()
+print("perimeter of rectangle=",r.perimeter())
+r1=Rectangle()
+r1.show()
+r1.area()
+print("perimeter of rectangle=",r1.perimeter())
+
+
+
+
+class Rectangle:
+	def __init__(self):   #constrcutor
+		print("enter rectangle length and breadth")
+		self.length=int(input())
+		self.breadth=int(input())
+	def show(self):
+		print("rectangle lenegth=",self.length)
+		print("rectangle breadth=",self.breadth)
+	def area(self):
+		print("area of rectangle=",self.length*self.breadth)
+	def perimeter(self):
+		return 2*(self.length+self.breadth)
+r=Rectangle()
+r.show()
+r.area()
+print("perimeter of rectangle=",r.perimeter())
+r1=Rectangle()
+r1.show()
+r1.area()
+print("perimeter of rectangle=",r1.perimeter())
+
+
+
+parameter constructor
+__________________
+class Rectangle:
+	def __init__(self,L,B):   #constrcutor
+		self.length=L
+		self.breadth=B
+	def show(self):
+		print("rectangle lenegth=",self.length)
+		print("rectangle breadth=",self.breadth)
+	def area(self):
+		print("area of rectangle=",self.length*self.breadth)
+	def perimeter(self):
+		return 2*(self.length+self.breadth)
+r=Rectangle(5,7)
+r.show()
+r.area()
+print("perimeter of rectangle=",r.perimeter())
+r1=Rectangle(10,20)
+r1.show()
+r1.area()
+print("perimeter of rectangle=",r1.perimeter())
+
+
+keyboard input
+________________
+class Rectangle:
+	def __init__(self,L,B):   #constrcutor
+		self.length=L
+		self.breadth=B
+	def show(self):
+		print("rectangle lenegth=",self.length)
+		print("rectangle breadth=",self.breadth)
+	def area(self):
+		print("area of rectangle=",self.length*self.breadth)
+	def perimeter(self):
+		return 2*(self.length+self.breadth)
+print("enter rectangle length and breadth ")
+r=Rectangle(int(input()),int(input()))
+r.show()
+r.area()
+print("perimeter of rectangle=",r.perimeter())
+
+
+
+
+
+
+class Rectangle:
+	def __init__(self,L,B):   #constrcutor
+		self.length=L
+		self.breadth=B
+	def show(self):
+		print("rectangle lenegth=",self.length)
+		print("rectangle breadth=",self.breadth)
+	def area(self):
+		print("area of rectangle=",self.length*self.breadth)
+	def perimeter(self):
+		return 2*(self.length+self.breadth)
+print("enter rectangle length and breadth ")
+L=[]
+print("enter how many rectangle shape")
+s=int(input())
+for i in range(s):
+	print("enter rectangle ",i+1," length and breadth")
+	r=Rectangle(int(input()),int(input()))
+	L.append(r)
+for i in L:	
+	i.show()
+	i.area()
+	print("perimeter of rectangle=",i.perimeter())
+
+
+
+class Rectangle:
+    def __init__(self, L, B):   # constructor
+        self.length = L
+        self.breadth = B
+    def show(self):
+        return self.length, self.breadth
+    def area(self):
+        return self.length * self.breadth
+    def perimeter(self):
+        return 2 * (self.length + self.breadth)
+print("Enter how many rectangle shapes:")
+s = int(input())
+rectangles = []
+for i in range(s):
+    print(f"Enter rectangle {i+1} length and breadth:")
+    L = int(input("Length: "))
+    B = int(input("Breadth: "))
+    rectangles.append(Rectangle(L, B))
+print("\n{:<10}{:<10}{:<10}{:<10}{:<12}".format("Rectangle", "Length", "Breadth", "Area", "Perimeter"))
+print("-" * 52)
+for i, r in enumerate(rectangles, start=1):
+    print("{:<10}{:<10}{:<10}{:<10}{:<12}".format(i,r.length,r.breadth,r.area(),r.perimeter()))
+
+
+class Rectangle:
+    def __init__(self, L, B):
+        self.length = L
+        self.breadth = B
+
+    def area(self):
+        return self.length * self.breadth
+
+    def perimeter(self):
+        return 2 * (self.length + self.breadth)
+
+print("Enter how many rectangle shapes:")
+s = int(input())
+
+rectangles = []
+
+for i in range(s):
+    print(f"Enter rectangle {i+1} length and breadth:")
+    L = int(input("Length: "))
+    B = int(input("Breadth: "))
+    rectangles.append(Rectangle(L, B))
+
+print("\n" + "-" * 60)
+print(f"{'No':>5}{'Length':>10}{'Breadth':>10}{'Area':>10}{'Perimeter':>15}")
+print("-" * 60)
+
+for i, r in enumerate(rectangles, start=1):
+    print(f"{i:>5}{r.length:>10}{r.breadth:>10}{r.area():>10}{r.perimeter():>15}")
